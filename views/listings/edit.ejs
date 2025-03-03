@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h2>Edit your Listing:</h2>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-lable">Name</label>
+            <input name="listing[title]" value="<%= listing.title %>" class="form-control" required>
+        </div>
+        <br>
+        <div>
+            <label for="description" class="form-lable">Info about food to be donated</label>
+            <textarea name="listing[description]" class="form-control" required>"<%= listing.description%>"</textarea>
+        </div>
+        <br>
+        <div class="mb-3">
+            Original Image:<br>
+            <img src="<%= listing.image.url%>" style="width: 270px; height: 240px; border-radius: 10px; border: 3px solid black;">
+        </div>
+        <br>
+        <div>
+            <label for="image" class="form-lable">Upload New Image</label>
+            <input name="listing[image]" type="file" class="form-control" required>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="price" class="form-lable">Price</label>
+                <input name="listing[price]" value="<%= listing.price %>" class="form-control" required>
+            </div>
+            <br>
+            <div class="col-md-8">
+                <label for="country" class="form-lable">Country</label>
+                <input name="listing[country]" value="<%= listing.country %>" class="form-control" required>
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="location" class="form-lable">Location</label>
+            <input name="listing[location]" value="<%= listing.location %>" class="form-control" required>
+        </div>
+
+        <br>
+        <button class="btn btn-dark edit-btn">Done</button>
+    </form>
+    </div>
+</div>
+<script src="/js/script.js"></script>

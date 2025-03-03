@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">Make a Money Donation</h2>
+  <form method="POST" action="/moneydonation" novalidate class="needs-validation">
+    <div class="mb-3">
+      <label for="donorName" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="donorName" name="donor[name]" required>
+      <div class="invalid-feedback">
+        Please provide your name.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="donorEmail" class="form-label">Your Email</label>
+      <input type="email" class="form-control" id="donorEmail" name="donor[email]" required>
+      <div class="invalid-feedback">
+        Please provide a valid email.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="donationAmount" class="form-label">Donation Amount (&#8377;)</label>
+      <input type="number" class="form-control" id="donationAmount" name="donor[amount]" min="1" required>
+      <div class="invalid-feedback">
+        Please enter a donation amount greater than $0.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="donationMessage" class="form-label">Message (Optional)</label>
+      <textarea class="form-control" id="donationMessage" name="donor[message]" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Donate Now</button>
+  </form>
+</div>

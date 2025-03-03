@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+    <h2>Create a new Doner:</h2>
+    <br>
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-lable">Name</label>
+            <input name="listing[title]" placeholder="Enter Doner's Name" class="form-control" type="text" required>
+            <div class="valid-feedback">Title looks good!!</div>
+        </div>
+        <br>
+        <div>
+            <label for="description" class="form-lable">Info about food to be donated</label>
+            <textarea name="listing[description]" placeholder="Enter Description" class="form-control" required></textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>        
+        <br>
+        <div>
+            <label for="image" class="form-lable">Upload Doner's Image</label>
+            <input name="listing[image]" placeholder="Enter Image URL" class="form-control" type="file">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="price" class="form-lable">Price</label>
+                <input name="listing[price]" placeholder="Enter Price" class="form-control" required>
+                <div class="invalid-feedback">Please enter valid price</div>
+            </div>
+            <br>
+            <div class="col-md-8">
+                <label for="country" class="form-lable">Country</label>
+                <input name="listing[country]" placeholder="Enter Country" class="form-control" type="text" required>
+                <div class="invalid-feedback">Please enter valid country name</div>
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="location" class="form-lable">Location</label>
+            <input name="listing[location]" placeholder="Enter Location" class="form-control" type="text" required>
+            <div class="invalid-feedback">Please enter valid location</div>
+        </div>
+        <br>
+        <button class="btn btn-dark add-btn">Donate</button>
+        
+    </form>
+    </div>
+</div>

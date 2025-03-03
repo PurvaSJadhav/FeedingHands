@@ -1,0 +1,57 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    #filters {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        
+    }
+
+    .filter{
+        text-align: center;
+        margin-right: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        opacity: 0.7;
+    }
+
+    .filter:hover{
+        opacity: 1;
+    }
+    
+    .tax-info{
+        display: none;
+    }
+
+    .tax-toggle{
+        border: 1px solid black;
+        border-radius: 1rem;
+        height: 3.5rem;
+        padding: 1rem;
+        margin-inline-start: auto;
+    }
+</style>
+
+    <br>
+    <h1 class="text-center">Your Extra Food, Someone’s Lifeline!!!</h1>
+    <br>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1   ">
+        <% for(let listing of allListings) { %>
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card listing-card" >
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+            <div class="card-img-overlay">
+                <b><%= listing.title %></b>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b><%= listing.title %></b><br>
+                    <i><%= listing.description %> </i>   
+                    
+                </p>
+            </div>
+        </div>
+        </a>
+        <% } %>
+    </div>

@@ -1,0 +1,126 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    /* Full-screen background image */
+    body {
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Title styling with slide-in animation */
+    .title {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+        margin-top: 50px;
+        animation: slideIn 1.5s ease-out forwards;
+        transform: translateY(100px);
+    }
+
+    /* Button styling with hover effects */
+    .btn-custom {
+        display: block;
+        margin: 0 auto;
+        margin-top: 150px;
+        padding: 18px 35px;
+        font-size: 1.4rem;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        transition: all 0.4s ease;
+        opacity: 0;
+        animation: fadeIn 1.8s ease-out forwards;
+        animation-delay: 0.5s;
+        transform: translateY(100px);
+        box-shadow: 0 10px 30px rgba(255, 111, 97, 0.4);
+    }
+
+    .btn-custom:hover {
+        background-color: #d74b2e;
+        color: #fff;
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 15px 40px rgba(215, 75, 46, 0.6);
+    }
+
+    .btn-custom:focus {
+        outline: none;
+    }
+
+    /* Keyframe Animations */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Adding a subtle animation to the background */
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+
+    body {
+        animation: backgroundAnimation 20s linear infinite;
+    }
+
+    /* Full-screen Spline scene styling */
+    .spline-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure the Spline is in the background */
+    }
+</style>
+
+<body>
+    <!-- Title -->
+    <div class="title">Welcome to WanderLust</div>
+    
+    <!-- Form with centered button -->
+    <a href="/listings" style="text-decoration: none;">
+        <button class="btn btn-custom">Explore Listings</button>
+    </a>
+
+    <!-- Spline Embed: Replace the URL with your Spline scene link -->
+    <div class="spline-container">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/wZA5NRiaslql715S/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
