@@ -65,7 +65,9 @@ Prevent food waste while making a difference in people’s lives!
 ## 👥 Team HackXplore
 
 Sahil Jadhav
+
 Purva Jadhav
+
 Prerana Biradar
 
 ## 📢 Why FeedingHands Matters
