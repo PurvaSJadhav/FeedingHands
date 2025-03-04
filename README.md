@@ -73,3 +73,9 @@ Prerana Biradar
 ## 📢 Why FeedingHands Matters
 
 💰 Saves costs for businesses by reducing waste disposal expenses.🍽️ Provides food security to vulnerable communities.🌱 Reduces environmental impact by cutting food waste and carbon footprint.
+
+## About
+
+🤝 Visit our site on: https://feedinghands-7dt1.onrender.com
+
+made with love <3
